@@ -1,6 +1,7 @@
 package scala.Scalculator
 
-class Calculator(args: Array[String]) {
+class Calculator {
+  def main(args: Array[String]): Unit = ???
   def tokenize() = ???
   def parse() = ???
   def add(): Unit = ???

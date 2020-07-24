@@ -1,16 +1,26 @@
 package scala.Scalculator
 
-import org.scalatest._
-import flatspec._
-import matchers._
+import org.scalatest.FunSuite
 
-class CalculatorTest() extends AnyFlatSpec with should.Matchers {
-  It should "add numbers" in {
+class CalculatorTest extends FunSuite {
+  test ("add numbers") {
+    val achieved = 1 + 1
+    val expected = 2
+    assert(achieved == expected)
   }
-  it should "subtract numbers" in {
+  test ("subtract numbers") {
+    val achieved = 1 - 1
+    val expected = 0
+    assert(achieved == expected)
   }
-  it should "multiply numbers" in {
+  test ("multiply numbers") {
+    val achieved = 2 * 2
+    val expected = 4
+    assert(achieved == expected)
   }
-  it should "divide numbers" in {
+  test ("divide numbers") {
+    val achieved = 4 / 2
+    val expected = 2
+    assert(achieved == expected)
   }
 }
