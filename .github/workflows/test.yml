@@ -1,9 +1,16 @@
 name: CI
+
 on: push
 
 jobs:
-  test:
+  build-and-test:
+    name: Scala Calculator
     runs-on: ubuntu-latest
-  steps:
-    - uses: actions/checkout@v1
-    - run: sbt run
+    env:
+      working-directory: ./scalaculator
+    steps:
+      - uses: actions/checkout@v1
+      - run: sbt test
+        working-directory ${{env.working-directory}}
+      - run: sbt run
+        working-directory ${{env.working-directory}}
