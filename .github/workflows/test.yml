@@ -3,10 +3,10 @@ name: CI
 on: push
 
 jobs:
-  build_and_test:
+  test_and_run:
     name: Scala Calculator
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - run: sbt test
-      - run: sbt build
+      - run: sbt run

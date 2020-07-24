@@ -1,7 +1,13 @@
-lazy val root = (project in file(".")).settings(
+scalaVersion in ThisBuild := "2.11.12"
+
+lazy val commonSettings = Seq(
   name := "Scalaculator",
-  version := "1.0",
-  scalaVersion := "2.13.3",
+  organization := "com.github",
+  version := "1.0"
+)
+
+lazy val app = (project in file(".")).settings(commonSettings: _*).
+  settings(
   scalacOptions ++= Seq(
     "-deprecation",
     "-feature",
